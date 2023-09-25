@@ -7,6 +7,8 @@ export default function Home() {
       <h1 className='text-3xl pb-3'>CPRG 306: Web Development 2 - Assignments</h1>
       <StudentInfo />
       <Link className="hover:underline" href="\week2">Week 2</Link>
+      <Link className="hover:underline" href="\week3">Week 3</Link>
+
     </main>
   )
 }
