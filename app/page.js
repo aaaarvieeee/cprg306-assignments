@@ -8,7 +8,7 @@ export default function Home() {
       <StudentInfo />
       <Link className="hover:underline" href="\week2">Week 2</Link>
       <Link className="hover:underline" href="\week3">Week 3</Link>
-
+      <Link className="hover:underline" href="\week4">Week 4</Link>
     </main>
   )
 }
