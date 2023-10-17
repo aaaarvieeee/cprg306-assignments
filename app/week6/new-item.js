@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function NewItem() {
+export default function NewItem({onAddItem}) {
     const [name, setName] = useState("");
     const [quantity, setQuantity] = useState(1);
     const [category, setCategory] = useState("produce");
@@ -18,7 +18,7 @@ export default function NewItem() {
 
         console.log(item);
 
-        alert(`You are buying ${quantity} ${name} in the ${category} category.`);
+        alert(`You are buying ${onAddItem.quantity} ${onAddItem.name} in the ${onAddItem.category} category.`);
 
         setName("");
         setQuantity(1);
@@ -27,7 +27,7 @@ export default function NewItem() {
 
     return (
         <main>
-            <div className="justify-center flex items-center h-100 w-150 bg-grey-100">
+            <div className="flex items-center h-100 w-150 bg-grey-100">
                 <form className="justify-center" onSubmit={handleSubmit}>
                     <div className="flex flex-row">
                         <input required className="text-black" type="text" value={name} onChange={(event) => setName(event.target.value)} />
