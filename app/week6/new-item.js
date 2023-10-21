@@ -16,10 +16,8 @@ export default function NewItem({onAddItem}) {
             category,
         };
 
-        console.log(item);
-
-        alert(`You are buying ${onAddItem.quantity} ${onAddItem.name} in the ${onAddItem.category} category.`);
-
+        onAddItem(item);
+        
         setName("");
         setQuantity(1);
         setCategory("produce");
